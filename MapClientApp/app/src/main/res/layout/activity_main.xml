@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Podaj współrzędne pikseli (max 1000x1000):"
+            android:textSize="18sp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Lewy górny róg -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lewy górny róg (X, Y)"
+            android:layout_marginBottom="4dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/left_X1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="X1"
+                android:inputType="number"
+                android:text="0"
+                android:maxLength="4" />
+
+            <EditText
+                android:id="@+id/left_Y1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Y1"
+                android:inputType="number"
+                android:text="0"
+                android:maxLength="4"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+
+        <!-- Prawy dolny róg -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Prawy dolny róg (X, Y)"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="4dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/right_X2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="X2"
+                android:inputType="number"
+                android:text="1000"
+                android:maxLength="4" />
+
+            <EditText
+                android:id="@+id/right_Y2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Y2"
+                android:inputType="number"
+                android:text="1000"
+                android:maxLength="4"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnFetchMap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pobierz Mapę"
+            android:layout_marginTop="16dp" />
+
+        <ImageView
+            android:id="@+id/imgMap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:layout_marginTop="16dp" />
+    </LinearLayout>
+</ScrollView>
